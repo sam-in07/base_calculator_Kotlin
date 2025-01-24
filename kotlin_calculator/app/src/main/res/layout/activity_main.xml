@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- EditText for cost of service input -->
+    <EditText
+        android:id="@+id/cosEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Cost of Service"
+        android:inputType="numberDecimal" />
+
+    <!-- TextView for service question -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="How was the service?" />
+
+    <!-- RadioGroup for selecting a tip percentage -->
+    <RadioGroup
+        android:id="@+id/tipOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- RadioButton for Amazing (20%) tip -->
+        <RadioButton
+            android:id="@+id/option_twenty_percent"
+            android:text="Amazing (20%)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- RadioButton for Good (10%) tip -->
+        <RadioButton
+            android:id="@+id/option_ten_percent"
+            android:text="Good (10%)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- RadioButton for Okay (5%) tip -->
+        <RadioButton
+            android:id="@+id/option_five_percent"
+            android:text="Okay (5%)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <!-- Toggle switch for rounding up the tip -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Round up tip?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/roundUpSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Button to calculate the total tip -->
+
+    <!-- TextView to display the total tip -->
+    <Button
+        android:id="@+id/calculatebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CALCULATE" />
+
+    <TextView
+        android:id="@+id/ttTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="Total Tip" />
+
+</LinearLayout>
+
+
+
+
+
+    <!-- RadioGroup to select a percentage tip
+    The RadioGroup class in Android allows for a group of RadioButton widgets. When a RadioButton is selected, the previously selected one (if any) is automatically deselected. This behavior ensures that only one RadioButton can be selected at a time within that group, making RadioGroup a useful container for presenting choices to users where only one option should be chosen.
+
+    Key Attributes of RadioGroup:
+    android:orientation: Defines the orientation of the RadioGroup. It can be set to horizontal or vertical.
+
+    android:layout_width: The width of the RadioGroup.
+
+    android:layout_height: The height of the RadioGroup.
+
+    Key Attributes of RadioButton:
+    android:id: A unique identifier for the RadioButton.
+
+    android:text: The text displayed next to the RadioButton.
+
+    android:layout_width: The width of the RadioButton.
+
+    android:layout_height: The height of the RadioButton.        -->
